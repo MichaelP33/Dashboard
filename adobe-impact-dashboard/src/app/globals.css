@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+@layer base {
+  * {
+    @apply border-border-primary;
+  }
+  
+  body {
+    @apply bg-background-primary text-text-primary font-sans;
+    @apply antialiased;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-background-secondary border border-border-primary rounded-lg p-6;
+    @apply shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-impact-5 hover:bg-blue-600 text-white px-4 py-2 rounded-md;
+    @apply font-medium transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-background-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-background-tertiary hover:bg-border-secondary text-text-primary px-4 py-2 rounded-md;
+    @apply font-medium transition-colors duration-200 border border-border-primary;
+    @apply focus:outline-none focus:ring-2 focus:ring-border-secondary focus:ring-offset-2 focus:ring-offset-background-primary;
+  }
+
+  .input {
+    @apply bg-background-secondary border border-border-primary text-text-primary px-3 py-2 rounded-md;
+    @apply focus:outline-none focus:ring-2 focus:ring-impact-5 focus:ring-offset-2 focus:ring-offset-background-primary;
+    @apply placeholder:text-text-muted;
+  }
+
+  .table-header {
+    @apply bg-background-tertiary text-text-accent font-medium px-4 py-3;
+    @apply border-b border-border-primary text-sm uppercase tracking-wide;
+  }
+
+  .table-cell {
+    @apply px-4 py-3 border-b border-border-primary text-sm;
+    @apply hover:bg-background-tertiary transition-colors duration-150;
+  }
+
+  .impact-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .impact-1 {
+    @apply bg-red-500/20 text-red-400 border border-red-500/30;
+  }
+
+  .impact-2 {
+    @apply bg-orange-500/20 text-orange-400 border border-orange-500/30;
+  }
+
+  .impact-3 {
+    @apply bg-yellow-500/20 text-yellow-400 border border-yellow-500/30;
+  }
+
+  .impact-4 {
+    @apply bg-green-500/20 text-green-400 border border-green-500/30;
+  }
+
+  .impact-5 {
+    @apply bg-blue-500/20 text-blue-400 border border-blue-500/30;
+  }
+
+  .ai-bar {
+    @apply relative bg-background-tertiary rounded-full h-2 overflow-hidden;
+  }
+
+  .ai-bar-fill {
+    @apply h-full rounded-full transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-text-accent to-text-primary bg-clip-text text-transparent;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-background-secondary;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-border-primary rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-border-secondary;
+  }
+}
