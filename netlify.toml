@@ -1,6 +1,5 @@
 [build]
-  base = "adobe-impact-dashboard"
-  command = "npm run build"
+  command = "cd adobe-impact-dashboard && npm run build"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
